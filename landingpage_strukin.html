@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Struk.in</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://unpkg.com/@popmotion/popmotion@8.7.4/dist/popmotion.global.min.js"></script>
+  <style>
+    .fade-in, .fade-in-image, .fade-in-text {
+      opacity: 0;
+      transition: all 0.6s ease-in-out;
+    }
+
+    .fade-in {
+      transform: translateY(20px);
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .fade-in-image {
+      transform: scale(0.8);
+    }
+    .fade-in-image.visible {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .fade-in-text {
+      transform: translateY(20px);
+    }
+    .fade-in-text.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .float {
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
+  </style>
+</head>
+<body class="font-sans bg-white text-gray-900">
+
+  <!-- Navbar -->
+  <nav class="flex items-center justify-between px-6 py-4 bg-white shadow">
+    <div class="text-xl font-bold text-yellow-500">Struk.in</div>
+    <ul class="flex space-x-6 text-gray-700">
+      <li><a href="#" class="hover:text-yellow-500">Home</a></li>
+      <li><a href="#intro" class="hover:text-yellow-500">About Us</a></li>
+      <li><a href="#additional-features" class="hover:text-yellow-500">Features</a></li>
+    </ul>
+    <a href="#">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play" class="w-32">
+    </a>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="bg-gray-50 fade-in">
+    <div class="flex flex-col-reverse md:flex-row items-center justify-between px-6 py-20 max-w-6xl mx-auto">
+      <div class="max-w-xl">
+        <h1 class="text-4xl font-bold mb-4">
+          Scan Your <span class="text-yellow-500">Struk</span><br />
+          Split the bill evenly
+        </h1>
+        <p class="text-gray-600 mb-6">
+          Praktis, mudah, dan aman untuk simpan struk belanja. Pantau pengeluaran harian dengan lebih terkontrol.
+        </p>
+      </div>
+      <img src="hero.png" alt="Mockup App" class="w-96 mb-10 md:mb-0 float" />
+    </div>
+  </section>
+
+  <!-- Intro Section -->
+  <section id="intro" class="bg-yellow-400 text-black px-6 py-20 fade-in">
+    <div class="flex flex-col md:flex-row items-center justify-between max-w-6xl mx-auto">
+      <img src="intro.png" alt="App Preview" class="w-full max-w-lg mb-8 md:mb-0 md:mr-12 float" />
+      <div class="text-center md:text-left max-w-xl">
+        <h2 class="text-3xl font-bold mb-4">Kenalin, Kami Struk.in!</h2>
+        <p class="mb-6">
+          Struk.in adalah solusi untuk memudahkan kamu dalam mengelola struk belanja dan membagi tagihan dengan teman. Dengan hanya melakukan scan struk, kamu bisa simpan riwayat belanja dan melakukan split bill dengan cepat, akurat, dan terpantau.
+        </p>
+        <a href="#">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" class="w-40 hover:scale-105 transform transition duration-300 ease-in-out">
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="px-6 py-20 bg-white">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 max-w-6xl mx-auto text-center">
+      <div class="fade-in flex flex-col items-center h-full px-4">
+        <img src="gambar1.png" alt="Icon 1" class="mx-auto mb-4 w-80 h-80 object-contain mr-8" />
+        <p class="text-gray-700 text-sm sm:text-base mt-auto">Masukin barang kamu lebih mudah hanya dengan scan struk.</p>
+      </div>
+      <div class="fade-in flex flex-col items-center h-full px-4">
+        <img src="gambar2.png" alt="Icon 2" class="mx-auto mb-4 w-80 h-80 object-contain mr-8" />
+        <p class="text-gray-700 text-sm sm:text-base mt-auto">Cukup scan struk belanjaan, sistem kami akan deteksi otomatis.</p>
+      </div>
+      <div class="fade-in flex flex-col items-center h-full px-4">
+        <img src="gambar3.png" alt="Icon 3" class="mx-auto mb-4 w-80 h-80 object-contain mr-8" />
+        <p class="text-gray-700 text-sm sm:text-base mt-auto">Tagihan langsung terbagi otomatis dengan teman-temanmu.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Tambahan -->
+  <section id="additional-features" class="bg-yellow-400 py-20 px-4">
+    <div class="text-center mb-12 fade-in">
+      <h2 class="text-4xl font-bold text-black">Our Features</h2>
+    </div>
+    <div class="max-w-6xl mx-auto space-y-20">
+
+      <!-- Fitur 1 -->
+      <div class="flex flex-col md:flex-row items-center justify-start text-left px-4 gap-4 ml-24">
+        <img src="fitur1.png" alt="Scan Struk OCR" class="w-72 mr-auto fade-in-image" />
+        <div class="ml-4 fade-in-text">
+          <h3 class="text-lg font-bold text-black mb-2">Scan struk otomatis dengan teknologi OCR</h3>
+          <p class="text-sm text-black leading-relaxed max-w-lg">
+            Dengan teknologi OCR (Optical Character Recognition), Struk.in membaca semua item dari struk belanja kamu.
+            Nggak perlu input manual, semua langsung kebaca: item, harga, dan jumlah. Proses jadi lebih cepat, akurat, dan bebas repot.
+          </p>
+        </div>
+      </div>
+
+      <!-- Fitur 2 -->
+      <div class="flex flex-col md:flex-row-reverse items-center justify-start text-left px-4 gap-4 ml-40">
+        <img src="fitur2.png" alt="Split Bill" class="w-72 mr-auto fade-in-image" />
+        <div class="fade-in-text">
+          <h3 class="text-lg font-bold text-black mb-2">Split bill berdasarkan item, persentase, atau nominal</h3>
+          <p class="text-sm text-black leading-relaxed max-w-lg">
+            Bikin ribet membagi tagihan? Nggak lagi! Kamu bisa atur split bill berdasarkan item yang dibeli, persentase, atau nominal.
+            Bisa custom sesuai kesepakatan dan langsung dikirim ke teman lewat app. Praktis dan anti ribet.
+          </p>
+        </div>
+      </div>
+
+      <!-- Fitur 3 -->
+      <div class="flex flex-col md:flex-row items-center justify-start text-left px-4 gap-4 ml-24">
+        <img src="fitur3.png" alt="Riwayat Transaksi" class="w-72 mr-auto fade-in-image" />
+        <div class="ml-4 fade-in-text">
+          <h3 class="text-lg font-bold text-black mb-2">Riwayat transaksi yang bisa diakses kapan saja</h3>
+          <p class="text-sm text-black leading-relaxed max-w-lg">
+            Semua struk yang sudah kamu scan akan tersimpan rapi di akunmu. Nggak perlu takut kehilangan lagi.
+            Butuh catatan lama? Tinggal cari dan cek kapan pun kamu butuh. Nggak perlu takut data hilang atau tercecer.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-100 text-center py-6 text-gray-600">
+    &copy; 2025 Struk.in. All rights reserved.
+  </footer>
+
+  <!-- Intersection Observer untuk animasi berulang -->
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        } else {
+          entry.target.classList.remove('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in, .fade-in-image, .fade-in-text')
+      .forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
